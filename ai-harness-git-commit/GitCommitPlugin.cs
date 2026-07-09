@@ -17,6 +17,9 @@ public sealed partial class GitCommitPlugin : PluginBase
 {
     public override string PluginName => "ai-harness-git-commit";
 
+    public override string Description =>
+        "git commit のメッセージ規約（tag・文字数・禁止語）を強制する";
+
     /// <summary>PreToolUse の全ツールで発火し、Action 内で Bash/git commit を自己フィルタ。</summary>
     public override IReadOnlyList<string> Events => new[] { "PreToolUse" };
 
