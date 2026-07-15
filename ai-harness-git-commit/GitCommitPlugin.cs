@@ -25,6 +25,9 @@ public sealed partial class GitCommitPlugin : PluginBase
 
     public override string ConfigName => "ai-harness-git-commit.yml";
 
+    /// <summary>埋め込み rule（<c>git-commit.rule.md</c>）を各プロジェクトの <c>.claude/rules</c> へ配布する。</summary>
+    public override bool ProvidesRule => true;
+
     public override IEnumerable<LogEntry> Init()
     {
         yield return LogEntry.Info("初期化");
