@@ -17,9 +17,10 @@
     </ProjectReference>
   </ItemGroup>
 
-  <!-- 各プロジェクトの .claude/rules へ配布する rule 本文。CopyRule が末尾 .rule.md の埋め込みを配置する。 -->
+  <!-- .claude/rules へ配布する rule（CopyRule）と、有効化時に無ければ置くデフォルト設定（CopyDefaultConfig）。 -->
   <ItemGroup>
     <EmbeddedResource Include="git-commit.rule.md" />
+    <EmbeddedResource Include="git-commit.config.yml" />
   </ItemGroup>
 
 </Project>
