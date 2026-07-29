@@ -7,6 +7,8 @@
     <LangVersion>latest</LangVersion>
     <RootNamespace>ai_harness_git_commit</RootNamespace>
     <AssemblyName>ai-harness-git-commit</AssemblyName>
+    <Version>0.1.0</Version>
+    <InformationalVersion>0.1.0</InformationalVersion>
     <!-- baselib はホスト(ai-harness-main)が共有ロードするため、出力にコピーしない。 -->
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
@@ -19,7 +21,9 @@
 
   <!-- .claude/rules へ配布する rule（CopyRule）と、有効化時に無ければ置くデフォルト設定（CopyDefaultConfig）。 -->
   <ItemGroup>
-    <EmbeddedResource Include="git-commit.rule.md" />
+    <EmbeddedResource Include="../resources/rules/git-commit.rule.md">
+      <LogicalName>rules/git-commit.rule.md</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="git-commit.config.yml" />
   </ItemGroup>
 
